@@ -1,3 +1,16 @@
-<p>
-  blog-view works!
-</p>
+<div class="container">
+    <div class="row" *ngIf="currentBlog">
+        <div class="col-md-12">
+            <h2>{{currentBlog.title}}</h2>
+            <p>posted by {{currentBlog.author}} on {{currentBlog.created | date}}</p>
+            <hr>
+            <p><strong>{{currentBlog.description}}</strong></p>
+            <h5>Category - {{currentBlog.category}}</h5>
+            <div class="clearfix">
+                <a class="btn btn-primary" [routerLink]="['/edit', currentBlog.blogId]">Edit</a>
+                <a class="btn btn-danger" href="#">Delete</a>
+                <a class="btn btn-warning" href="#">Go Back</a>
+            </div>
+        </div>
+    </div>
+</div>
