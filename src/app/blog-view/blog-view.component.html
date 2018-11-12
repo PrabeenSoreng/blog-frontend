@@ -2,7 +2,7 @@
     <div class="row" *ngIf="currentBlog">
         <div class="col-md-12">
             <h2>{{currentBlog.title}}</h2>
-            <p>posted by {{currentBlog.author}} on {{currentBlog.created | date}}</p>
+            <p>Posted by {{currentBlog.author}} on {{currentBlog.created | date}}</p>
             <hr>
             <p><strong>{{currentBlog.description}}</strong></p>
             <h5>Category - {{currentBlog.category}}</h5>
