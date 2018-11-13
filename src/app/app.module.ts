@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -11,6 +13,7 @@ import { BlogEditComponent } from './blog-edit/blog-edit.component';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { BlogService } from './services/blog.service';
+import { BlogHttpService } from './services/blog-http.service';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,7 @@ import { BlogService } from './services/blog.service';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {path: '', redirectTo: 'home', pathMatch: 'full'},
       {path: 'home', component: HomeComponent},
@@ -36,7 +40,8 @@ import { BlogService } from './services/blog.service';
     ])
   ],
   providers: [
-    BlogService
+    BlogService,
+    BlogHttpService
   ],
   bootstrap: [AppComponent]
 })
