@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogCreateComponent implements OnInit {
 
+  blogTitle: string;
+  blogDescription: string;
+  blogCategory: string;
+  possibleCategories = ["Comedy", "Drama", "Action", "Technology"];
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSubmit(form) {
+    console.log(form);
   }
 
 }

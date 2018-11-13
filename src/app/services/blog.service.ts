@@ -36,6 +36,16 @@ export class BlogService {
       views: 21,
       description: "This is Blog 3 description",
       title: "This is Blog 3",
+    },
+    {
+      blogId: 4,
+      created: new Date(2018, 4, 20),
+      author: "Admin",
+      category: "Comedy",
+      isPublished: true,
+      views: 21,
+      description: "This is Blog 4 description",
+      title: "This is Blog 4",
     }
   ];
 

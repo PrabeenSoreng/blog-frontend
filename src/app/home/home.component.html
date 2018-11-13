@@ -1,21 +1,15 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>All Blogs</h1>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-md-4" *ngFor="let blog of allBlogs">
-            <div class="card text-center">
-                <div class="card-header">{{blog.title | uppercase}}</div>
-                <div class="card-body">
-                    <p class="card-text">{{blog.description}}</p>
-                </div>
-                <div class="card-footer">
-                    <p>Posted on {{blog.created | date}} <br> by {{blog.author}} <br></p>
-                    <a class="btn btn-primary mt-3" [routerLink]="['/blog', blog.blogId]">Read</a>
-                </div>
+<h1>All Blogs</h1>
+<br>
+<div class="row">
+    <div class="col-md-6 mb-5" *ngFor="let blog of allBlogs">
+        <div class="card">
+            <h5 class="card-header">{{blog.title}}</h5>
+            <div class="card-body">
+                <p class="card-text">{{blog.description}}</p>
+            </div>
+            <div class="card-footer clearfix">
+                <a class="btn btn-primary" [routerLink]="['/blog', blog.blogId]">Read</a>
+                <small><span class="float-right">Posted on {{blog.created | date}} <br> by {{blog.author}}</span></small>
             </div>
         </div>
     </div>

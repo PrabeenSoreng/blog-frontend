@@ -9,7 +9,7 @@
             <div class="clearfix">
                 <a class="btn btn-primary" [routerLink]="['/edit', currentBlog.blogId]">Edit</a>
                 <a class="btn btn-danger" href="#">Delete</a>
-                <a class="btn btn-warning" href="#">Go Back</a>
+                <a class="btn btn-warning" (click)="onGoBack()">Go Back</a>
             </div>
         </div>
     </div>
